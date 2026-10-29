@@ -9,6 +9,10 @@
 
 .bg-xp { background-color: var(--xp-primary); }
 
+/* Soft tinted page background; cards and forms stay white. */
+body { background-color: #f3f1f9; }
+.card, .list-group-item, .form-control, .form-select { background-color: #fff; }
+
 .btn-primary {
   --bs-btn-bg: #3b2a7a; --bs-btn-border-color: #3b2a7a;
   --bs-btn-hover-bg: #2e205f; --bs-btn-hover-border-color: #2e205f;
