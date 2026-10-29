@@ -1,0 +1,57 @@
+{# Reusable pieces of markup. #}
+
+{% macro evidence_badge(level) -%}
+  {%- set labels = {"A": "A · peer-reviewed study", "B": "B · expert source", "C": "C · community source"} -%}
+  <span class="badge evidence evidence-{{ level|lower }}" title="Evidence level {{ labels[level] }}">Evidence {{ labels[level] }}</span>
+{%- endmacro %}
+
+{% macro game_facts(game) -%}
+  <ul class="list-inline small text-body-secondary mb-2 facts">
+    <li class="list-inline-item">{{ game.genre }}</li>
+    <li class="list-inline-item">{{ game.platform_list|join(", ") }}</li>
+    <li class="list-inline-item">PEGI {{ game.pegi }}</li>
+    <li class="list-inline-item">{{ {"free": "Free to play", "paid": "Paid", "subscription": "Subscription"}[game.price_model] }}</li>
+    <li class="list-inline-item">{{ {"single": "Single player", "multi": "Multiplayer", "both": "Single and multiplayer"}[game.play_mode] }}</li>
+    <li class="list-inline-item">about {{ game.session_minutes }} min per session</li>
+  </ul>
+{%- endmacro %}
+
+{% macro sources_list(sources) -%}
+  <ul class="list-unstyled small mb-0 sources">
+    {% for source in sources %}
+      <li><a href="{{ source.url }}" target="_blank" rel="noopener">{{ source.citation }}</a> ({{ source.evidence }})</li>
+    {% endfor %}
+  </ul>
+{%- endmacro %}
+
+{% macro save_button(game, skill, saved, next_url) -%}
+  {% if current_user.is_authenticated %}
+    <form method="post" action="{{ url_for('account.toggle') }}" class="d-inline">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="game_id" value="{{ game.id }}">
+      <input type="hidden" name="skill_id" value="{{ skill.id }}">
+      <input type="hidden" name="next" value="{{ next_url }}">
+      {% if (game.id, skill.id) in saved or skill.id in saved %}
+        <button class="btn btn-sm btn-outline-secondary" type="submit">Saved for {{ skill.name }} · remove</button>
+      {% else %}
+        <button class="btn btn-sm btn-outline-primary" type="submit">Save for {{ skill.name }}</button>
+      {% endif %}
+    </form>
+  {% endif %}
+{%- endmacro %}
+
+{% macro render_field(field) -%}
+  <div class="mb-3">
+    {% if field.type in ("SelectMultipleField",) %}
+      {{ field.label(class="form-label") }}
+      {{ field(class="form-select" + (" is-invalid" if field.errors else ""), size=8) }}
+    {% elif field.type == "SelectField" %}
+      {{ field.label(class="form-label") }}
+      {{ field(class="form-select" + (" is-invalid" if field.errors else "")) }}
+    {% else %}
+      {{ field.label(class="form-label") }}
+      {{ field(class="form-control" + (" is-invalid" if field.errors else "")) }}
+    {% endif %}
+    {% for error in field.errors %}<div class="invalid-feedback d-block">{{ error }}</div>{% endfor %}
+  </div>
+{%- endmacro %}

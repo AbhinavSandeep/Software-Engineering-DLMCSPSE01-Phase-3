@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Page not found{% endblock %}
+{% block content %}
+<h1 class="h3">Page not found</h1>
+<p>This page does not exist. <a href="{{ url_for('catalogue.index') }}">Back to the skills</a></p>
+{% endblock %}

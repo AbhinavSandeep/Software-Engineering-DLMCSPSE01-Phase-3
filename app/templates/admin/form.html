@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% from "_macros.html" import render_field %}
+{% block title %}{{ "Edit" if entity else "New" }} {{ title|lower }}{% endblock %}
+{% block content %}
+<div class="row"><div class="col-lg-8">
+  <a class="small" href="{{ url_for('admin.dashboard') }}">&larr; Back to the admin area</a>
+  <h1 class="h3 my-3">{{ "Edit" if entity else "New" }} {{ title|lower }}</h1>
+  <form method="post" novalidate>
+    {{ form.hidden_tag() }}
+    {% for field in form if field.name != "csrf_token" %}{{ render_field(field) }}{% endfor %}
+    <button class="btn btn-primary" type="submit">Save</button>
+  </form>
+  {% if delete_url %}
+    <form method="post" action="{{ delete_url }}" class="mt-4" onsubmit="return confirm('Delete this {{ title|lower }}?');">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button class="btn btn-outline-danger btn-sm" type="submit">Delete {{ title|lower }}</button>
+    </form>
+  {% endif %}
+</div></div>
+{% endblock %}

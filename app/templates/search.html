@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "_macros.html" import game_facts %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<h1 class="h3">Search a game</h1>
+<form class="d-flex gap-2 mb-4" role="search" action="{{ url_for('games.search') }}">
+  <label class="visually-hidden" for="q">Game title</label>
+  <input class="form-control" id="q" name="q" value="{{ term }}" placeholder="e.g. Portal" autofocus>
+  <button class="btn btn-primary" type="submit">Search</button>
+</form>
+
+{% if term and term|length < 2 %}
+  <p>Please enter at least two letters.</p>
+{% elif term %}
+  <p class="text-body-secondary small">{{ games|length }} result{{ "" if games|length == 1 else "s" }} for "{{ term }}".</p>
+  {% for game in games %}
+    <article class="card mb-2"><div class="card-body">
+      <h2 class="h5 mb-1"><a href="{{ url_for('games.detail', slug=game.slug) }}">{{ game.title }}</a></h2>
+      {{ game_facts(game) }}
+      <p class="mb-0 small">Trains:
+        {% for m in game.mappings|sort(attribute="strength", reverse=true) %}{{ m.skill.name }}{% if not loop.last %}, {% endif %}{% endfor %}
+      </p>
+    </div></article>
+  {% else %}
+    <div class="alert alert-info">No game found. The catalogue only lists games with a sourced skill link.</div>
+  {% endfor %}
+{% endif %}
+{% endblock %}

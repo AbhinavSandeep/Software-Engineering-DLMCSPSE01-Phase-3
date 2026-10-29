@@ -1,0 +1,176 @@
+game,skill,strength,reason,source_keys
+call-of-duty-warzone,selective-attention,2,Call of Duty: Warzone is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+call-of-duty-warzone,reaction-time,2,Fast action games like Call of Duty: Warzone train the speed of perception and response.,dye2009;bediou2018
+call-of-duty-warzone,decision-making,1,Action games like Call of Duty: Warzone train fast decisions based on uncertain information.,green2010
+call-of-duty-warzone,teamwork,2,Call of Duty: Warzone is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+call-of-duty-warzone,communication,1,Call of Duty: Warzone requires players to share information and coordinate in real time.,granic2014
+overwatch-2,selective-attention,2,Overwatch 2 is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+overwatch-2,reaction-time,2,Fast action games like Overwatch 2 train the speed of perception and response.,dye2009;bediou2018
+overwatch-2,decision-making,1,Action games like Overwatch 2 train fast decisions based on uncertain information.,green2010
+overwatch-2,teamwork,2,Overwatch 2 is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+overwatch-2,communication,1,Overwatch 2 requires players to share information and coordinate in real time.,granic2014
+fortnite,selective-attention,2,Fortnite is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+fortnite,reaction-time,2,Fast action games like Fortnite train the speed of perception and response.,dye2009;bediou2018
+fortnite,decision-making,1,Action games like Fortnite train fast decisions based on uncertain information.,green2010
+fortnite,teamwork,2,Fortnite is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+fortnite,communication,1,Fortnite requires players to share information and coordinate in real time.,granic2014
+apex-legends,selective-attention,2,Apex Legends is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+apex-legends,reaction-time,2,Fast action games like Apex Legends train the speed of perception and response.,dye2009;bediou2018
+apex-legends,decision-making,1,Action games like Apex Legends train fast decisions based on uncertain information.,green2010
+apex-legends,teamwork,2,Apex Legends is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+apex-legends,communication,1,Apex Legends requires players to share information and coordinate in real time.,granic2014
+valorant,selective-attention,2,Valorant is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+valorant,reaction-time,2,Fast action games like Valorant train the speed of perception and response.,dye2009;bediou2018
+valorant,decision-making,1,Action games like Valorant train fast decisions based on uncertain information.,green2010
+valorant,teamwork,2,Valorant is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+valorant,communication,1,Valorant requires players to share information and coordinate in real time.,granic2014
+counter-strike-2,selective-attention,2,Counter-Strike 2 is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+counter-strike-2,reaction-time,2,Fast action games like Counter-Strike 2 train the speed of perception and response.,dye2009;bediou2018
+counter-strike-2,decision-making,1,Action games like Counter-Strike 2 train fast decisions based on uncertain information.,green2010
+counter-strike-2,teamwork,2,Counter-Strike 2 is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+counter-strike-2,communication,1,Counter-Strike 2 requires players to share information and coordinate in real time.,granic2014
+doom-eternal,selective-attention,2,DOOM Eternal is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+doom-eternal,reaction-time,2,Fast action games like DOOM Eternal train the speed of perception and response.,dye2009;bediou2018
+doom-eternal,decision-making,1,Action games like DOOM Eternal train fast decisions based on uncertain information.,green2010
+halo-infinite,selective-attention,2,Halo Infinite is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+halo-infinite,reaction-time,2,Fast action games like Halo Infinite train the speed of perception and response.,dye2009;bediou2018
+halo-infinite,decision-making,1,Action games like Halo Infinite train fast decisions based on uncertain information.,green2010
+splatoon-3,selective-attention,2,Splatoon 3 is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+splatoon-3,reaction-time,2,Fast action games like Splatoon 3 train the speed of perception and response.,dye2009;bediou2018
+splatoon-3,decision-making,1,Action games like Splatoon 3 train fast decisions based on uncertain information.,green2010
+splatoon-3,teamwork,2,Splatoon 3 is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+splatoon-3,communication,1,Splatoon 3 requires players to share information and coordinate in real time.,granic2014
+deep-rock-galactic,selective-attention,2,Deep Rock Galactic is a fast action game; controlled studies show that action games train visual selective attention.,green2003;bediou2018
+deep-rock-galactic,reaction-time,2,Fast action games like Deep Rock Galactic train the speed of perception and response.,dye2009;bediou2018
+deep-rock-galactic,decision-making,1,Action games like Deep Rock Galactic train fast decisions based on uncertain information.,green2010
+deep-rock-galactic,teamwork,2,Deep Rock Galactic is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+deep-rock-galactic,communication,1,Deep Rock Galactic requires players to share information and coordinate in real time.,granic2014
+counter-strike-2,working-memory,1,Regular first-person shooter play is associated with better working memory.,colzato2013
+valorant,working-memory,1,Regular first-person shooter play is associated with better working memory.,colzato2013
+call-of-duty-warzone,working-memory,1,Regular first-person shooter play is associated with better working memory.,colzato2013
+doom-eternal,working-memory,1,Regular first-person shooter play is associated with better working memory.,colzato2013
+portal-2,problem-solving,3,Portal 2 was used in a controlled study: players improved problem solving more than a brain-training group.,shute2015
+portal-2,spatial-reasoning,3,"In the same study, Portal 2 players also improved their spatial skills.",shute2015
+portal-2,persistence,2,Portal 2 players showed more persistence on hard tasks in the same controlled study.,shute2015
+portal-2,teamwork,1,The two-player campaign of Portal 2 can only be solved together.,granic2014
+portal,problem-solving,2,"Portal uses the same puzzle mechanics as Portal 2, which improved problem solving in a controlled study.",shute2015
+portal,spatial-reasoning,2,Portal trains mental rotation and spatial imagination; video game training improves spatial skills.,shute2015;spence2010
+starcraft-ii,cognitive-flexibility,3,Training with StarCraft improved cognitive flexibility in a controlled study; StarCraft II plays in the same way.,glass2013
+starcraft-ii,strategic-planning,2,StarCraft II rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+starcraft-ii,decision-making,2,StarCraft II forces many fast decisions; real-time strategy training improved executive control.,glass2013;basak2008
+tetris-effect-connected,spatial-reasoning,2,Playing Tetris improved mental rotation and spatial visualisation in a controlled study.,okagaki1994;uttal2013
+tetris-effect-connected,stress-management,1,Tetris Effect: Connected is calm and relaxing; casual games can improve mood and reduce stress.,pallavicini2018
+super-mario-3d-world-bowser-s-fury,working-memory,3,Super Mario 3D World was used in a controlled study in which players improved their memory performance.,clemenson2015
+super-mario-3d-world-bowser-s-fury,spatial-reasoning,2,Playing a 3D Mario game increased brain regions linked to spatial navigation in a controlled study.,kuhn2014
+super-mario-3d-world-bowser-s-fury,teamwork,1,Up to four players can complete the levels together.,granic2014
+super-mario-odyssey,spatial-reasoning,2,Playing a 3D Mario game increased brain regions linked to spatial navigation in a controlled study.,kuhn2014
+super-mario-odyssey,working-memory,2,Exploring 3D worlds in games like Super Mario Odyssey improved memory in a controlled study.,clemenson2015
+rise-of-nations-extended-edition,strategic-planning,3,Rise of Nations was used in a controlled study in which training improved executive control and reasoning.,basak2008
+rise-of-nations-extended-edition,cognitive-flexibility,2,Training with a real-time strategy game improved task switching and working memory in a controlled study.,basak2008
+rise-of-nations-extended-edition,working-memory,2,Training with a real-time strategy game improved task switching and working memory in a controlled study.,basak2008
+age-of-empires-ii-definitive-edition,strategic-planning,2,Age of Empires II: Definitive Edition rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013;basak2008
+age-of-empires-ii-definitive-edition,cognitive-flexibility,2,Real-time strategy games like Age of Empires II: Definitive Edition require constant switching between tasks; RTS training improved cognitive flexibility.,glass2013
+sid-meier-s-civilization-vi,strategic-planning,2,Sid Meier's Civilization VI rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+sid-meier-s-civilization-vi,problem-solving,2,Sid Meier's Civilization VI presents changing problems that need analysis; strategic games are linked to better problem solving.,adachi2013
+sid-meier-s-civilization-vi,decision-making,1,"Every turn in Civilization VI asks for trade-offs between economy, science and diplomacy.",adachi2013
+xcom-2,strategic-planning,2,XCOM 2 rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+xcom-2,decision-making,2,XCOM 2 makes every decision count because lost units are gone for good.,adachi2013
+into-the-breach,strategic-planning,2,Into the Breach rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+into-the-breach,problem-solving,2,Into the Breach presents changing problems that need analysis; strategic games are linked to better problem solving.,adachi2013
+plague-inc-evolved,strategic-planning,1,Plague Inc: Evolved rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+plague-inc-evolved,problem-solving,1,Plague Inc: Evolved presents changing problems that need analysis; strategic games are linked to better problem solving.,adachi2013
+football-manager-2024,strategic-planning,2,Football Manager 2024 rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+football-manager-2024,decision-making,1,"Football Manager asks for many decisions on tactics, players and budgets with incomplete information.",adachi2013
+hearthstone,strategic-planning,2,Hearthstone rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+hearthstone,decision-making,1,Each Hearthstone turn asks for a choice between several options under uncertainty.,adachi2013
+pikmin-4,strategic-planning,1,Pikmin 4 rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+pikmin-4,leadership,1,In Pikmin 4 you lead a group and assign tasks to its members.,granic2014
+league-of-legends,teamwork,2,League of Legends is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+league-of-legends,strategic-planning,2,League of Legends rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+league-of-legends,communication,2,League of Legends requires players to share information and coordinate in real time.,granic2014
+league-of-legends,leadership,1,League of Legends lets players lead a group; research describes such online games as practice fields for leadership.,lisk2012
+dota-2,teamwork,2,Dota 2 is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+dota-2,strategic-planning,2,Dota 2 rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+dota-2,communication,2,Dota 2 requires players to share information and coordinate in real time.,granic2014
+dota-2,leadership,1,Dota 2 lets players lead a group; research describes such online games as practice fields for leadership.,lisk2012
+world-of-warcraft,leadership,2,Raid groups in World of Warcraft need leaders; studies of such games describe them as leadership labs.,reeves2008;lisk2012
+world-of-warcraft,teamwork,2,World of Warcraft is won as a team; cooperative play increases cooperation after the game.,granic2014;ewoldsen2012
+world-of-warcraft,communication,1,World of Warcraft requires players to share information and coordinate in real time.,granic2014
+final-fantasy-xiv-online,teamwork,2,Final Fantasy XIV Online is won as a team; cooperative play increases cooperation after the game.,granic2014;ewoldsen2012
+final-fantasy-xiv-online,leadership,2,Final Fantasy XIV Online lets players lead a group; research describes such online games as practice fields for leadership.,lisk2012
+final-fantasy-xiv-online,communication,1,Final Fantasy XIV Online requires players to share information and coordinate in real time.,granic2014
+eve-online,leadership,2,EVE Online lets players lead a group; research describes such online games as practice fields for leadership.,reeves2008;lisk2012
+eve-online,strategic-planning,2,EVE Online rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+rocket-league,teamwork,2,Rocket League is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012
+rocket-league,hand-eye-coordination,2,Rocket League needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+rocket-league,reaction-time,1,Fast action games like Rocket League train the speed of perception and response.,dye2009
+minecraft,creativity,2,Minecraft is used in schools for creative projects; video game play is linked to higher creativity.,jackson2012;nebel2016
+minecraft,problem-solving,1,A literature review describes Minecraft projects that train problem solving.,nebel2016
+minecraft,teamwork,1,Shared Minecraft worlds are used in education for collaborative building.,nebel2016
+terraria,creativity,1,Terraria is about building your own things; video game play is linked to higher creativity in children.,jackson2012
+terraria,persistence,1,Terraria is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+roblox,creativity,2,With Roblox Studio players design their own games; video game play is linked to higher creativity.,jackson2012
+super-mario-maker-2,creativity,2,Super Mario Maker 2 is about building your own things; video game play is linked to higher creativity in children.,jackson2012
+super-mario-maker-2,problem-solving,1,Designing a level that others can finish needs planning and testing.,granic2014
+dreams,creativity,2,Dreams is about building your own things; video game play is linked to higher creativity in children.,jackson2012
+scribblenauts-unlimited,creativity,2,Scribblenauts rewards original word ideas to solve each puzzle.,jackson2012
+scribblenauts-unlimited,problem-solving,1,Scribblenauts Unlimited is a puzzle game with new rules to discover; puzzle play improved problem solving in a controlled study.,shute2015
+stardew-valley,stress-management,2,Stardew Valley is calm and relaxing; casual games can improve mood and reduce stress.,pallavicini2018;granic2014
+stardew-valley,strategic-planning,1,"Stardew Valley rewards planning crops, time and money over a season.",adachi2013
+stardew-valley,helping-others,1,Stardew Valley rewards helping others; prosocial games increase helping behaviour after play.,gentile2009
+animal-crossing-new-horizons,stress-management,2,Animal Crossing: New Horizons is calm and relaxing; casual games can improve mood and reduce stress.,pallavicini2018;granic2014
+animal-crossing-new-horizons,helping-others,1,Animal Crossing: New Horizons rewards helping others; prosocial games increase helping behaviour after play.,gentile2009
+kerbal-space-program,problem-solving,2,Kerbal Space Program turns rocket design into trial-and-error problem solving.,granic2014;adachi2013
+kerbal-space-program,persistence,1,Kerbal Space Program is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+cities-skylines,strategic-planning,2,Cities: Skylines rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+cities-skylines,problem-solving,1,Cities: Skylines presents changing problems that need analysis; strategic games are linked to better problem solving.,adachi2013
+factorio,problem-solving,2,Factorio presents changing problems that need analysis; strategic games are linked to better problem solving.,adachi2013
+factorio,strategic-planning,2,Factorio rewards long-term planning; strategic games are linked to better problem solving over time.,adachi2013
+journey,helping-others,2,Journey lets anonymous players help each other without words; prosocial games increase helping behaviour.,gentile2009
+journey,stress-management,1,Journey is calm and relaxing; casual games can improve mood and reduce stress.,pallavicini2018
+celeste,persistence,2,Celeste is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+celeste,hand-eye-coordination,2,Celeste needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+hollow-knight,persistence,2,Hollow Knight is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+hollow-knight,hand-eye-coordination,1,Hollow Knight needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+elden-ring,persistence,2,Elden Ring is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+elden-ring,reaction-time,1,Fast action games like Elden Ring train the speed of perception and response.,dye2009
+baba-is-you,problem-solving,2,Baba Is You is a puzzle game with new rules to discover; puzzle play improved problem solving in a controlled study.,shute2015
+baba-is-you,cognitive-flexibility,1,"Baba Is You keeps changing the rules, so you have to drop old strategies.",granic2014
+the-witness,problem-solving,2,The Witness is a puzzle game with new rules to discover; puzzle play improved problem solving in a controlled study.,shute2015
+the-witness,persistence,1,The Witness is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+monument-valley,spatial-reasoning,2,Monument Valley trains mental rotation and spatial imagination; video game training improves spatial skills.,spence2010;uttal2013
+monument-valley,stress-management,1,Monument Valley is calm and relaxing; casual games can improve mood and reduce stress.,pallavicini2018
+human-resource-machine,problem-solving,2,Human Resource Machine teaches step-by-step programming logic through puzzles.,shute2015
+human-resource-machine,working-memory,1,Each solution requires keeping several values and steps in mind at once.,granic2014
+beat-saber,physical-activity,2,Beat Saber is controlled with body movement; exergames raise physical activity.,staiano2011
+beat-saber,hand-eye-coordination,2,Beat Saber needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+just-dance-2024-edition,physical-activity,2,Just Dance 2024 Edition is controlled with body movement; exergames raise physical activity.,staiano2011
+ring-fit-adventure,physical-activity,2,Ring Fit Adventure is controlled with body movement; exergames raise physical activity.,staiano2011
+nintendo-switch-sports,physical-activity,2,Nintendo Switch Sports is controlled with body movement; exergames raise physical activity.,staiano2011
+nintendo-switch-sports,hand-eye-coordination,1,Nintendo Switch Sports needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+pok-mon-go,physical-activity,1,Pokémon GO rewards walking outside; games that require movement raise physical activity.,staiano2011
+mario-kart-8-deluxe,hand-eye-coordination,2,Mario Kart 8 Deluxe needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+mario-kart-8-deluxe,reaction-time,1,Fast action games like Mario Kart 8 Deluxe train the speed of perception and response.,dye2009
+trackmania,hand-eye-coordination,2,Trackmania needs precise and fast hand control; video game skill is linked to better hand-eye coordination.,rosser2007
+trackmania,persistence,1,Trackmania is hard and requires many attempts; video game use is linked to persistence on difficult tasks.,ventura2013
+dr-kawashima-s-brain-training-for-nintendo-switch,working-memory,2,An earlier version of Brain Training improved executive functions and processing speed in a controlled study.,nouchi2012
+dr-kawashima-s-brain-training-for-nintendo-switch,reaction-time,1,The same study found faster processing speed after training.,nouchi2012
+big-brain-academy-brain-vs-brain,working-memory,1,Short brain-training tasks like these improved executive functions in a controlled study of a similar game.,nouchi2012
+overcooked-2,teamwork,2,Overcooked! 2 is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+overcooked-2,communication,2,Overcooked! 2 requires players to share information and coordinate in real time.,granic2014
+moving-out,teamwork,2,Moving Out is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012
+moving-out,communication,1,Moving Out requires players to share information and coordinate in real time.,granic2014
+keep-talking-and-nobody-explodes,communication,2,"One player sees the bomb, the others the manual: the game can only be won by clear explanations.",granic2014
+keep-talking-and-nobody-explodes,teamwork,2,Keep Talking and Nobody Explodes is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012
+keep-talking-and-nobody-explodes,stress-management,1,Staying calm under a ticking clock is part of the game.,granic2014
+spaceteam,communication,2,Spaceteam requires players to share information and coordinate in real time.,granic2014
+spaceteam,teamwork,1,Spaceteam is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012
+it-takes-two,teamwork,2,It Takes Two is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+it-takes-two,communication,2,It Takes Two requires players to share information and coordinate in real time.,granic2014
+it-takes-two,problem-solving,1,Many puzzles in It Takes Two need both players to find the solution together.,granic2014
+among-us,communication,2,Among Us is decided in group discussions where players must argue and listen.,granic2014
+among-us,decision-making,1,Players must decide whom to trust based on incomplete information.,granic2014
+sea-of-thieves,teamwork,2,Sea of Thieves is won as a team; cooperative play increases cooperation after the game.,ewoldsen2012;granic2014
+sea-of-thieves,communication,2,Sea of Thieves requires players to share information and coordinate in real time.,granic2014
+sea-of-thieves,leadership,1,Sea of Thieves lets players lead a group; research describes such online games as practice fields for leadership.,lisk2012
+apex-legends,leadership,1,Apex Legends lets players lead a group; research describes such online games as practice fields for leadership.,lisk2012

@@ -1,0 +1,144 @@
+% XPtoIRL installation and user manual (compile with XeLaTeX)
+\documentclass[a4paper,11pt]{article}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\setmonofont{Consolas}[Scale=0.9]
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\usepackage{setspace}
+\setstretch{1.2}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{13}{15}\selectfont\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\fontsize{11.5}{14}\selectfont\bfseries}{\thesubsection}{0.6em}{}
+\usepackage{enumitem}
+\setlist{itemsep=2pt, topsep=2pt}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage[hidelinks]{hyperref}
+\RecustomVerbatimEnvironment{Verbatim}{Verbatim}{frame=single, rulecolor=\color{gray!60}, xleftmargin=4pt}
+
+\begin{document}
+
+{\fontsize{16}{19}\selectfont\bfseries XPtoIRL: Installation and User Manual}\\[2pt]
+Release 1.0.0 \textbar\ Project: Software Engineering (DLMCSPSE01) \textbar\ Leela Sai Abhinav Gamidi (UPS10617430)
+
+\section{Overview}
+XPtoIRL is a web application that recommends video games for the real-life skills a
+user wants to develop. The application can be used in three ways: online in the cloud
+(no installation), locally with Docker (recommended), or locally with Python only.
+
+\section{Online use}
+Open the link given in the submission file \texttt{XPtoIRL\_links.txt} in a current
+browser (Chrome, Firefox or Edge). The file also contains the login data of a test
+administrator. On the free cloud plan the first request after a longer pause can take
+up to one minute, because the service is started again.
+
+\section{Installation with Docker (recommended)}
+\textbf{Requirements:} Docker Desktop with Docker Compose, Git.
+
+\begin{Verbatim}
+git clone <repository URL>
+cd xptoirl
+docker compose up --build
+\end{Verbatim}
+
+Open \url{http://localhost:8000}. On the first start the container creates the
+PostgreSQL tables and imports the data set (17 skills, 66 games, 175 mappings,
+26 sources). If port 8000 is already used, choose another host port:
+
+\begin{Verbatim}
+# macOS / Linux
+WEB_PORT=8010 docker compose up --build
+# Windows PowerShell
+$env:WEB_PORT=8010; docker compose up --build
+\end{Verbatim}
+
+To create an administrator, set \texttt{ADMIN\_EMAIL} and \texttt{ADMIN\_PASSWORD} in a
+\texttt{.env} file (copy \texttt{.env.example}) before the start, or run:
+
+\begin{Verbatim}
+docker compose exec web flask create-admin admin@example.org
+\end{Verbatim}
+
+Stop the application with \texttt{docker compose down}; add \texttt{-v} to delete the database as well.
+
+\section{Installation without Docker}
+\textbf{Requirements:} Python 3.11 or newer. Without \texttt{DATABASE\_URL} the application uses a local SQLite file.
+
+\begin{Verbatim}
+python -m venv .venv
+.venv\Scripts\activate          # macOS/Linux: source .venv/bin/activate
+pip install -r requirements-dev.txt
+set FLASK_APP=wsgi.py           # macOS/Linux: export FLASK_APP=wsgi.py
+flask db upgrade
+flask seed
+flask create-admin admin@example.org
+flask run
+\end{Verbatim}
+
+Open \url{http://127.0.0.1:5000}.
+
+\section{Cloud deployment (Render)}
+The repository contains the Render Blueprint \texttt{render.yaml}. In the Render
+dashboard choose \textbf{New $>$ Blueprint}, select the GitHub repository, enter
+\texttt{ADMIN\_EMAIL} and \texttt{ADMIN\_PASSWORD} and confirm. Render creates the
+PostgreSQL database and the web service, generates \texttt{SECRET\_KEY}, sets
+\texttt{DATABASE\_URL} and checks the service with \texttt{/api/health}. Each push to
+the main branch deploys the new version.
+
+\section{Configuration}
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Variable} & \textbf{Meaning} & \textbf{Default} \\ \hline
+\texttt{APP\_ENV} & \texttt{development}, \texttt{production} or \texttt{testing} & \texttt{development} \\ \hline
+\texttt{SECRET\_KEY} & Key for sessions and CSRF tokens, required in production & dev value \\ \hline
+\texttt{DATABASE\_URL} & SQLAlchemy URL of the database & SQLite file \\ \hline
+\texttt{ADMIN\_EMAIL}, \texttt{ADMIN\_PASSWORD} & Administrator created on container start & empty \\ \hline
+\texttt{WEB\_PORT} & Host port used by \texttt{docker compose} & 8000 \\ \hline
+\texttt{PORT} & Port of Gunicorn inside the container (set by the cloud) & 8000 \\ \hline
+\end{tabularx}
+
+\section{Using the application}
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Find games.} On the start page choose one to three skills (grouped by
+  cognitive, social, motor and emotional) and press \emph{Find games}.
+\item \textbf{Filter.} Narrow the results by platform, genre, PEGI age, price model,
+  play mode and session length. Each result shows the score, the reason, the
+  evidence level (A strong, B medium, C weak) and the sources.
+\item \textbf{Game page.} Open a game to see all trained skills with reasons and
+  links to the studies. The search field finds games by title.
+\item \textbf{Learning plan.} After registering, save games to the learning plan, rate
+  how well a game trained a skill (1 to 5) and print the plan. Under
+  \emph{Account} the account can be deleted together with all data.
+\item \textbf{Administration.} Administrators open \emph{Admin} to create, edit and
+  delete skills, games, sources and mappings, or to import the four CSV files.
+  Every mapping needs at least one source.
+\end{enumerate}
+
+\section{Tests and quality checks}
+\begin{Verbatim}
+pytest --cov=app                                   # 86 tests
+ruff check .                                       # linter
+python scripts/load_test.py --base-url http://localhost:8000 --users 20
+\end{Verbatim}
+
+GitHub Actions runs the linter, the tests with a coverage gate (service layer
+$\geq$ 70\,\%) and a Docker build for every push.
+
+\section{Troubleshooting}
+\begin{tabularx}{\textwidth}{|L{5.2cm}|X|}
+\hline
+\textbf{Problem} & \textbf{Solution} \\ \hline
+\emph{port is already allocated} & Start with another \texttt{WEB\_PORT} (Section 3). \\ \hline
+Docker cannot connect to the daemon & Start Docker Desktop and wait until it shows ``running''. \\ \hline
+\emph{SECRET\_KEY must be set in production} & Set \texttt{SECRET\_KEY} or use \texttt{APP\_ENV=development} locally. \\ \hline
+Empty start page & Run \texttt{flask seed} (or restart the container) to import the data set. \\ \hline
+\end{tabularx}
+
+\end{document}

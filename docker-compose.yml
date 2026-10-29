@@ -1,0 +1,34 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-xptoirl}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-xptoirl}
+      POSTGRES_DB: ${POSTGRES_DB:-xptoirl}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-xptoirl}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      SECRET_KEY: ${SECRET_KEY:-dev-only-change-me}
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-xptoirl}:${POSTGRES_PASSWORD:-xptoirl}@db:5432/${POSTGRES_DB:-xptoirl}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+    ports:
+      # Host port can be changed with WEB_PORT if 8000 is already in use.
+      - "${WEB_PORT:-8000}:8000"
+
+volumes:
+  db-data:

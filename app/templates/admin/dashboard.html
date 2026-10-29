@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2 mb-3">
+  <h1 class="h3 mb-0">Admin area</h1>
+  <form method="post" action="{{ url_for('admin.run_import') }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="btn btn-sm btn-outline-primary" type="submit">Re-import CSV data set</button>
+  </form>
+</div>
+<p class="small text-body-secondary">{{ counts.skills }} skills · {{ counts.games }} games · {{ counts.sources }} sources ·
+  {{ counts.mappings }} mappings</p>
+
+<ul class="nav nav-tabs mb-3" role="tablist">
+  {% for tab in ["skills", "games", "sources", "mappings"] %}
+    <li class="nav-item" role="presentation">
+      <button class="nav-link {% if loop.first %}active{% endif %}" data-bs-toggle="tab" data-bs-target="#{{ tab }}"
+              type="button" role="tab">{{ tab|capitalize }}</button>
+    </li>
+  {% endfor %}
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="skills" role="tabpanel">
+    <a class="btn btn-sm btn-primary mb-2" href="{{ url_for('admin.skill_form') }}">New skill</a>
+    <table class="table table-sm align-middle"><thead><tr><th>Name</th><th>Category</th><th></th></tr></thead><tbody>
+      {% for s in skills %}<tr><td>{{ s.name }}</td><td>{{ s.category }}</td>
+        <td class="text-end"><a href="{{ url_for('admin.skill_form', skill_id=s.id) }}">Edit</a></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <div class="tab-pane fade" id="games" role="tabpanel">
+    <a class="btn btn-sm btn-primary mb-2" href="{{ url_for('admin.game_form') }}">New game</a>
+    <table class="table table-sm align-middle"><thead><tr><th>Title</th><th>Genre</th><th>PEGI</th><th></th></tr></thead><tbody>
+      {% for g in games %}<tr><td>{{ g.title }}</td><td>{{ g.genre }}</td><td>{{ g.pegi }}</td>
+        <td class="text-end"><a href="{{ url_for('admin.game_form', game_id=g.id) }}">Edit</a></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <div class="tab-pane fade" id="sources" role="tabpanel">
+    <a class="btn btn-sm btn-primary mb-2" href="{{ url_for('admin.source_form') }}">New source</a>
+    <table class="table table-sm align-middle"><thead><tr><th>Key</th><th>Evidence</th><th>Citation</th><th></th></tr></thead><tbody>
+      {% for s in sources %}<tr><td>{{ s.key }}</td><td>{{ s.evidence }}</td><td class="small">{{ s.citation|truncate(90) }}</td>
+        <td class="text-end"><a href="{{ url_for('admin.source_form', source_id=s.id) }}">Edit</a></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+  <div class="tab-pane fade" id="mappings" role="tabpanel">
+    <a class="btn btn-sm btn-primary mb-2" href="{{ url_for('admin.mapping_form') }}">New mapping</a>
+    <table class="table table-sm align-middle"><thead><tr><th>Game</th><th>Skill</th><th>Strength</th><th>Sources</th><th></th></tr></thead><tbody>
+      {% for m in mappings %}<tr><td>{{ m.game.title }}</td><td>{{ m.skill.name }}</td><td>{{ m.strength }}</td>
+        <td class="small">{{ m.sources|map(attribute="key")|join(", ") }}</td>
+        <td class="text-end"><a href="{{ url_for('admin.mapping_form', mapping_id=m.id) }}">Edit</a></td></tr>{% endfor %}
+    </tbody></table>
+  </div>
+</div>
+{% endblock %}

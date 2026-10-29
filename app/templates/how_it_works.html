@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "_macros.html" import evidence_badge %}
+{% block title %}How it works{% endblock %}
+{% block content %}
+<h1 class="h2">How XPtoIRL ranks games</h1>
+<p class="lead">XPtoIRL does not use a black-box model. Every result can be traced back to a reason and a source.</p>
+
+<h2 class="h4 mt-4">1. Skill-game links</h2>
+<p>Each game in the catalogue is linked to the skills it can train. Every link has a <strong>strength</strong> from 1
+  (weak) to 3 (strong), a one-sentence <strong>reason</strong> and at least one <strong>source</strong>.</p>
+
+<h2 class="h4 mt-4">2. Evidence levels</h2>
+<ul class="list-unstyled">
+  <li class="mb-2">{{ evidence_badge("A") }} weight {{ weights["A"] }}: a peer-reviewed study or meta-analysis.</li>
+  <li class="mb-2">{{ evidence_badge("B") }} weight {{ weights["B"] }}: an expert or reputable publication.</li>
+  <li class="mb-2">{{ evidence_badge("C") }} weight {{ weights["C"] }}: a community source.</li>
+</ul>
+<p>Many studies examine a <em>genre</em> (for example action games) rather than one title. In that case the reason
+  says so, and the link has a lower strength than a link to a game that was studied directly.</p>
+
+<h2 class="h4 mt-4">3. The score</h2>
+<p>For the skills you select, XPtoIRL adds up <em>strength × evidence weight</em> of each link. When at least three
+  users have rated a game for these skills, their average rating adds up to ±0.5 points. Ties are broken by the
+  number of sources.</p>
+<p class="small text-body-secondary">Example: a strong link (3) with evidence B (0.7) and a medium link (2) with
+  evidence B give 3 × 0.7 + 2 × 0.7 = 3.5 points.</p>
+
+<h2 class="h4 mt-4">Limits</h2>
+<p>Research on video games and skills is mixed; some studies find little transfer to everyday life. XPtoIRL shows the
+  evidence openly so that you can judge it yourself. It does not replace professional training or advice.</p>
+{% endblock %}

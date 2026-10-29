@@ -1,0 +1,67 @@
+slug,title,genre,platforms,pegi,price_model,play_mode,session_minutes,official_url,description
+portal-2,Portal 2,Puzzle,PC;PlayStation;Xbox;Switch,12,paid,both,60,https://www.thinkwithportals.com,"First-person puzzle game about portals, physics and a two-player co-op campaign."
+portal,Portal,Puzzle,PC;PlayStation;Xbox;Switch,12,paid,single,45,https://store.steampowered.com/app/400/Portal/,The original portal puzzle game; short and accessible.
+starcraft-ii,StarCraft II,Real-time strategy,PC,16,free,both,30,https://starcraft2.blizzard.com,Science-fiction real-time strategy with fast decisions and many units.
+tetris-effect-connected,Tetris Effect: Connected,Puzzle,PC;PlayStation;Xbox;Switch,3,paid,both,15,https://www.tetriseffect.game,"Tetris with music and visual effects, solo or with others."
+super-mario-3d-world-bowser-s-fury,Super Mario 3D World + Bowser's Fury,Platformer,Switch,3,paid,both,30,https://www.nintendo.com,3D platformer with explorable levels for up to four players.
+super-mario-odyssey,Super Mario Odyssey,Platformer,Switch,7,paid,both,30,https://www.nintendo.com,Open 3D platformer with large worlds to explore.
+rise-of-nations-extended-edition,Rise of Nations: Extended Edition,Real-time strategy,PC,12,paid,both,60,https://store.steampowered.com/app/287450/,Historical real-time strategy across eight ages.
+age-of-empires-ii-definitive-edition,Age of Empires II: Definitive Edition,Real-time strategy,PC;Xbox;PlayStation,12,paid,both,45,https://www.ageofempires.com,Classic historical real-time strategy with economy and armies.
+sid-meier-s-civilization-vi,Sid Meier's Civilization VI,Turn-based strategy,PC;PlayStation;Xbox;Switch;Mobile,12,paid,both,120,https://civilization.2k.com/civ-vi/,Turn-based strategy: build an empire over thousands of years.
+xcom-2,XCOM 2,Tactics,PC;PlayStation;Xbox;Switch,16,paid,single,60,https://xcom.com,Turn-based tactics with permanent consequences for every decision.
+into-the-breach,Into the Breach,Tactics,PC;Switch;Mobile,7,paid,single,30,https://subsetgames.com/itb.html,Compact turn-based tactics where every enemy move is shown in advance.
+plague-inc-evolved,Plague Inc: Evolved,Strategy,PC;PlayStation;Xbox;Switch;Mobile,12,paid,single,30,https://www.ndemiccreations.com,Strategy simulation about how a disease spreads across the world.
+football-manager-2024,Football Manager 2024,Sports management,PC;Mobile;PlayStation;Xbox;Switch,3,paid,single,60,https://www.footballmanager.com,"Manage a football club: tactics, transfers and training."
+hearthstone,Hearthstone,Card game,PC;Mobile,7,free,multi,15,https://hearthstone.blizzard.com,Digital collectible card game with short matches.
+league-of-legends,League of Legends,MOBA,PC,12,free,multi,35,https://www.leagueoflegends.com,Five-versus-five team strategy game with defined roles.
+dota-2,Dota 2,MOBA,PC,12,free,multi,45,https://www.dota2.com,Complex five-versus-five team strategy game.
+world-of-warcraft,World of Warcraft,MMORPG,PC,12,subscription,both,90,https://worldofwarcraft.blizzard.com,Online role-playing game with group raids that need a raid leader.
+final-fantasy-xiv-online,Final Fantasy XIV Online,MMORPG,PC;PlayStation;Xbox,16,subscription,both,90,https://www.finalfantasyxiv.com,Online role-playing game with coordinated group content.
+eve-online,EVE Online,MMO,PC,12,free,multi,90,https://www.eveonline.com,"Space game driven by player corporations, trade and diplomacy."
+call-of-duty-warzone,Call of Duty: Warzone,Battle royale,PC;PlayStation;Xbox,18,free,multi,30,https://www.callofduty.com/warzone,Fast first-person battle royale.
+overwatch-2,Overwatch 2,Team shooter,PC;PlayStation;Xbox;Switch,12,free,multi,20,https://overwatch.blizzard.com,Team-based hero shooter where roles must work together.
+fortnite,Fortnite,Battle royale,PC;PlayStation;Xbox;Switch;Mobile,12,free,multi,25,https://www.fortnite.com,Third-person battle royale with building.
+apex-legends,Apex Legends,Battle royale,PC;PlayStation;Xbox;Switch,16,free,multi,20,https://www.ea.com/games/apex-legends,Squad-based battle royale with a ping system for communication.
+valorant,Valorant,Team shooter,PC;PlayStation;Xbox,16,free,multi,40,https://playvalorant.com,Five-versus-five tactical shooter.
+counter-strike-2,Counter-Strike 2,Team shooter,PC,18,free,multi,45,https://www.counter-strike.net,Competitive five-versus-five tactical shooter.
+doom-eternal,DOOM Eternal,Action shooter,PC;PlayStation;Xbox;Switch,18,paid,single,45,https://bethesda.net/game/doom,Very fast first-person action shooter.
+halo-infinite,Halo Infinite,Action shooter,PC;Xbox,16,free,both,30,https://www.halowaypoint.com,First-person shooter; the multiplayer part is free to play.
+splatoon-3,Splatoon 3,Team shooter,Switch,7,paid,both,20,https://splatoon.nintendo.com,Colourful team shooter without violence against people.
+rocket-league,Rocket League,Sports,PC;PlayStation;Xbox;Switch,3,free,multi,15,https://www.rocketleague.com,Football with rocket-powered cars.
+minecraft,Minecraft,Sandbox,PC;PlayStation;Xbox;Switch;Mobile,7,paid,both,60,https://www.minecraft.net,"Open sandbox: build, explore and craft, alone or together."
+terraria,Terraria,Sandbox,PC;PlayStation;Xbox;Switch;Mobile,12,paid,both,60,https://terraria.org,2D sandbox adventure with building and exploration.
+roblox,Roblox,Creative,PC;PlayStation;Xbox;Mobile,7,free,both,45,https://www.roblox.com,Platform for playing and creating games with Roblox Studio.
+super-mario-maker-2,Super Mario Maker 2,Creative,Switch,3,paid,both,30,https://www.nintendo.com,Design your own platformer levels and share them.
+dreams,Dreams,Creative,PlayStation,12,paid,single,60,https://indreams.me,"Creation tool for games, music and animation."
+scribblenauts-unlimited,Scribblenauts Unlimited,Puzzle,PC;PlayStation;Xbox;Switch,7,paid,single,30,https://store.steampowered.com/app/218680/,Solve puzzles by writing words that become objects.
+stardew-valley,Stardew Valley,Simulation,PC;PlayStation;Xbox;Switch;Mobile,7,paid,both,45,https://www.stardewvalley.net,Calm farming and community simulation.
+animal-crossing-new-horizons,Animal Crossing: New Horizons,Simulation,Switch,3,paid,both,30,https://www.nintendo.com,Relaxed island life simulation.
+kerbal-space-program,Kerbal Space Program,Simulation,PC;PlayStation;Xbox,3,paid,single,60,https://www.kerbalspaceprogram.com,Design rockets and fly them with realistic orbital physics.
+cities-skylines,Cities: Skylines,Simulation,PC;PlayStation;Xbox;Switch,3,paid,single,60,https://www.paradoxinteractive.com/games/cities-skylines/about,"City-building simulation with traffic, budgets and services."
+factorio,Factorio,Simulation,PC;Switch,7,paid,both,90,https://www.factorio.com,Build and optimise automated factories.
+overcooked-2,Overcooked! 2,Co-op party,PC;PlayStation;Xbox;Switch,3,paid,both,20,https://www.team17.com/games/overcooked-2,Chaotic cooking game that only works with good coordination.
+keep-talking-and-nobody-explodes,Keep Talking and Nobody Explodes,Co-op party,PC;PlayStation;Xbox;Switch;Mobile;VR,3,paid,multi,20,https://keeptalkinggame.com,"One player defuses a bomb, the others read the manual and explain."
+it-takes-two,It Takes Two,Co-op adventure,PC;PlayStation;Xbox;Switch,12,paid,multi,60,https://www.ea.com/games/it-takes-two,Adventure built entirely for two players who must cooperate.
+among-us,Among Us,Social deduction,PC;PlayStation;Xbox;Switch;Mobile,7,paid,multi,15,https://www.innersloth.com/games/among-us/,"Discuss, argue and vote to find the impostor."
+deep-rock-galactic,Deep Rock Galactic,Action shooter,PC;PlayStation;Xbox,12,paid,both,40,https://www.deeprockgalactic.com,Cooperative first-person mining and shooting for up to four players.
+sea-of-thieves,Sea of Thieves,Co-op adventure,PC;PlayStation;Xbox,12,paid,multi,90,https://www.seaofthieves.com,Sail a pirate ship together; every task needs the crew.
+moving-out,Moving Out,Co-op party,PC;PlayStation;Xbox;Switch,3,paid,both,20,https://www.team17.com/games/moving-out,Physics-based removal game for up to four players.
+spaceteam,Spaceteam,Co-op party,Mobile,3,free,multi,10,https://spaceteam.ca,Shout instructions to each other to keep a spaceship flying.
+journey,Journey,Adventure,PC;PlayStation;Mobile,7,paid,both,120,https://thatgamecompany.com/journey/,Wordless journey where strangers can help each other.
+celeste,Celeste,Platformer,PC;PlayStation;Xbox;Switch,7,paid,single,30,https://www.celestegame.com,Precise and demanding platformer about climbing a mountain.
+hollow-knight,Hollow Knight,Metroidvania,PC;PlayStation;Xbox;Switch,7,paid,single,45,https://www.hollowknight.com,Challenging 2D action adventure.
+elden-ring,Elden Ring,Action RPG,PC;PlayStation;Xbox,16,paid,both,60,https://en.bandainamcoent.eu/elden-ring,Difficult open-world action role-playing game.
+baba-is-you,Baba Is You,Puzzle,PC;Switch;Mobile,3,paid,single,30,https://hempuli.com/baba/,Puzzle game in which you change the rules themselves.
+the-witness,The Witness,Puzzle,PC;PlayStation;Xbox;Mobile,3,paid,single,45,http://the-witness.net,Island full of line puzzles that teach their own rules.
+monument-valley,Monument Valley,Puzzle,Mobile;PC,3,paid,single,15,https://www.monumentvalleygame.com,Calm puzzle game with impossible architecture.
+human-resource-machine,Human Resource Machine,Puzzle,PC;Switch;Mobile,3,paid,single,20,https://tomorrowcorporation.com/humanresourcemachine,Programming puzzles disguised as office work.
+beat-saber,Beat Saber,Rhythm,VR;PlayStation;PC,3,paid,single,20,https://beatsaber.com,Virtual reality rhythm game: slice blocks to the beat.
+just-dance-2024-edition,Just Dance 2024 Edition,Rhythm,PlayStation;Xbox;Switch,3,paid,both,20,https://www.ubisoft.com/en-gb/game/just-dance/2024,Dance along to songs; the camera or controller scores your moves.
+ring-fit-adventure,Ring Fit Adventure,Exergame,Switch,3,paid,single,30,https://www.nintendo.com,Adventure game controlled by fitness exercises.
+nintendo-switch-sports,Nintendo Switch Sports,Exergame,Switch,7,paid,both,20,https://www.nintendo.com,Motion-controlled sports such as tennis and bowling.
+pok-mon-go,Pokémon GO,Exergame,Mobile,3,free,both,30,https://pokemongolive.com,Location-based game that rewards walking outside.
+mario-kart-8-deluxe,Mario Kart 8 Deluxe,Racing,Switch,3,paid,both,15,https://www.nintendo.com,Accessible kart racing for up to four players on one screen.
+trackmania,Trackmania,Racing,PC;PlayStation;Xbox,3,free,both,20,https://www.trackmania.com,Time-trial racing where every millisecond counts.
+dr-kawashima-s-brain-training-for-nintendo-switch,Dr Kawashima's Brain Training for Nintendo Switch,Brain training,Switch,3,paid,single,15,https://www.nintendo.com,"Short daily exercises for memory, calculation and attention."
+big-brain-academy-brain-vs-brain,Big Brain Academy: Brain vs. Brain,Brain training,Switch,3,paid,both,15,https://www.nintendo.com,Quick brain puzzles to play against friends and family.
+pikmin-4,Pikmin 4,Strategy,Switch,7,paid,single,45,https://www.nintendo.com,Lead a group of small creatures and plan each day carefully.

@@ -1,0 +1,36 @@
+/* XPtoIRL: small additions to Bootstrap 5. Colours meet WCAG 2.1 AA contrast. */
+:root {
+  --xp-primary: #3b2a7a;
+  --bs-primary: #3b2a7a;
+  --bs-primary-rgb: 59, 42, 122;
+  --bs-link-color: #3b2a7a;
+  --bs-link-color-rgb: 59, 42, 122;
+}
+
+.bg-xp { background-color: var(--xp-primary); }
+
+.btn-primary {
+  --bs-btn-bg: #3b2a7a; --bs-btn-border-color: #3b2a7a;
+  --bs-btn-hover-bg: #2e205f; --bs-btn-hover-border-color: #2e205f;
+  --bs-btn-active-bg: #241a4b; --bs-btn-disabled-bg: #3b2a7a; --bs-btn-disabled-border-color: #3b2a7a;
+}
+.btn-outline-primary {
+  --bs-btn-color: #3b2a7a; --bs-btn-border-color: #3b2a7a;
+  --bs-btn-hover-bg: #3b2a7a; --bs-btn-hover-border-color: #3b2a7a;
+  --bs-btn-active-bg: #3b2a7a; --bs-btn-active-border-color: #3b2a7a;
+}
+
+.hero { border-left: 4px solid var(--xp-primary); padding-left: 1rem; }
+.skill-chip { border-radius: 2rem; }
+.score-bar { width: 8rem; height: .4rem; }
+.score-bar .progress-bar { background-color: #0e7c6f; }
+.reason { border-color: #c9c2e4 !important; }
+.facts li:not(:last-child)::after { content: "·"; margin-left: .5rem; }
+
+.evidence { font-weight: 500; }
+.evidence-a { background-color: #0e6b5f; }
+.evidence-b { background-color: #3b2a7a; }
+.evidence-c { background-color: #6c5d2c; }
+
+.filters { position: sticky; top: 1rem; }
+@media (max-width: 991.98px) { .filters { position: static; } }

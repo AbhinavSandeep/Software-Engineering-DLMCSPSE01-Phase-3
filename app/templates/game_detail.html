@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% from "_macros.html" import evidence_badge, game_facts, sources_list, save_button with context %}
+{% block title %}{{ game.title }}{% endblock %}
+{% block content %}
+<nav aria-label="breadcrumb"><ol class="breadcrumb small">
+  <li class="breadcrumb-item"><a href="{{ url_for('catalogue.index') }}">Skills</a></li>
+  <li class="breadcrumb-item active" aria-current="page">{{ game.title }}</li>
+</ol></nav>
+
+<h1 class="h2">{{ game.title }}</h1>
+{{ game_facts(game) }}
+{% if game.description %}<p class="lead">{{ game.description }}</p>{% endif %}
+<p><a href="{{ game.official_url }}" target="_blank" rel="noopener">Official page</a></p>
+
+<h2 class="h4 mt-4">Skills this game trains</h2>
+{% for m in mappings %}
+  <section class="card mb-3">
+    <div class="card-body">
+      <div class="d-flex flex-wrap align-items-center gap-2 mb-1">
+        <h3 class="h5 mb-0">{{ m.skill.name }}</h3>
+        <span class="small text-body-secondary">strength {{ m.strength }}/3</span>
+        {{ evidence_badge(m.best_evidence) }}
+      </div>
+      <p class="mb-2">{{ m.reason }}</p>
+      {{ sources_list(m.sources) }}
+
+      <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+        {% set summary = ratings.get(m.skill.id) %}
+        <span class="small">
+          {% if summary %}Users rate it {{ summary[0] }}/5 for {{ m.skill.name }} ({{ summary[1] }} rating{{ "" if summary[1] == 1 else "s" }}).
+          {% else %}No ratings for {{ m.skill.name }} yet.{% endif %}
+        </span>
+        {% if current_user.is_authenticated %}
+          {{ save_button(game, m.skill, saved, request.path) }}
+          <form method="post" action="{{ url_for('account.rate') }}" class="d-flex align-items-center gap-2 rate-form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="game_id" value="{{ game.id }}">
+            <input type="hidden" name="skill_id" value="{{ m.skill.id }}">
+            <label class="small" for="score-{{ m.id }}">How well did it train {{ m.skill.name }}?</label>
+            <select class="form-select form-select-sm w-auto" name="score" id="score-{{ m.id }}">
+              {% for s in range(1, 6) %}<option value="{{ s }}" {% if own_ratings.get(m.skill.id) == s %}selected{% endif %}>{{ s }}</option>{% endfor %}
+            </select>
+            <button class="btn btn-sm btn-outline-primary" type="submit">{{ "Update rating" if m.skill.id in own_ratings else "Rate" }}</button>
+          </form>
+        {% else %}
+          <a class="small" href="{{ url_for('auth.login', next=request.path) }}">Log in to save or rate</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+{% endfor %}
+{% endblock %}

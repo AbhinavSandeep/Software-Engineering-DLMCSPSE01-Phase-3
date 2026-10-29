@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}No access{% endblock %}
+{% block content %}
+<h1 class="h3">No access</h1>
+<p>This area is only open to administrators. <a href="{{ url_for('catalogue.index') }}">Back to the skills</a></p>
+{% endblock %}

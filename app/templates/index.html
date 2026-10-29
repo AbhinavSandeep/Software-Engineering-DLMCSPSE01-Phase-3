@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Find games for real-life skills{% endblock %}
+{% block content %}
+<section class="hero mb-4">
+  <h1 class="h2 fw-bold">Which skill do you want to develop?</h1>
+  <p class="lead mb-0">Choose up to three skills. XPtoIRL lists games that train them, explains why and shows the source
+    for every recommendation.</p>
+</section>
+
+<form action="{{ url_for('recommend.results') }}" method="get" id="skill-form">
+  {% for category, skills in skills_by_category.items() %}
+    <fieldset class="mb-3">
+      <legend class="h6 text-uppercase text-body-secondary">{{ category }} skills</legend>
+      <div class="d-flex flex-wrap gap-2">
+        {% for skill in skills %}
+          <input type="checkbox" class="btn-check skill-check" name="skill" value="{{ skill.slug }}" id="skill-{{ skill.slug }}" autocomplete="off">
+          <label class="btn btn-outline-primary skill-chip" for="skill-{{ skill.slug }}" title="{{ skill.description }}">{{ skill.name }}</label>
+        {% endfor %}
+      </div>
+    </fieldset>
+  {% else %}
+    <div class="alert alert-info">No skills yet. An administrator can import the data set with <code>flask seed</code>.</div>
+  {% endfor %}
+
+  <div class="d-flex align-items-center gap-3 mt-4 sticky-bottom bg-body py-2">
+    <button type="submit" class="btn btn-primary btn-lg" id="find-games" disabled>Find games</button>
+    <span class="text-body-secondary" id="selection-hint" aria-live="polite">Select 1 to 3 skills.</span>
+  </div>
+</form>
+
+<p class="small text-body-secondary mt-4">
+  The catalogue contains {{ counts.skills }} skills, {{ counts.games }} games and {{ counts.mappings }} skill-game
+  links based on {{ counts.sources }} sources.
+</p>
+{% endblock %}

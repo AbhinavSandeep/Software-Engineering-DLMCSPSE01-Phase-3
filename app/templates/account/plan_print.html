@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My XPtoIRL learning plan</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 48rem; margin: 2rem auto; color: #000; }
+    h1 { font-size: 1.4rem; } h2 { font-size: 1.1rem; margin-top: 1.5rem; }
+    li { margin-bottom: .4rem; } .meta { color: #444; font-size: .85rem; }
+    @media print { .no-print { display: none; } }
+  </style>
+</head>
+<body>
+<p class="no-print"><button onclick="window.print()">Print</button> <a href="{{ url_for('account.plan') }}">Back</a></p>
+<h1>Learning plan of {{ current_user.email }}</h1>
+{% for skill, favourites in plan.items() %}
+  <h2>{{ skill.name }}</h2>
+  <ul>
+    {% for fav in favourites %}
+      {% set mapping = fav.game.mappings|selectattr("skill_id", "equalto", skill.id)|first %}
+      <li><strong>{{ fav.game.title }}</strong> ({{ fav.game.genre }}, PEGI {{ fav.game.pegi }}, about {{ fav.game.session_minutes }} min)<br>
+        <span class="meta">{{ mapping.reason if mapping else "" }}</span></li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>The plan is empty.</p>
+{% endfor %}
+</body>
+</html>

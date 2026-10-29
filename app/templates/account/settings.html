@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Account{% endblock %}
+{% block content %}
+<h1 class="h3">Account</h1>
+<p>Logged in as <strong>{{ current_user.email }}</strong>.</p>
+<p class="small text-body-secondary">XPtoIRL stores your e-mail address, a hash of your password, your learning plan
+  and your ratings. Nothing else is collected.</p>
+
+<div class="card border-danger mt-4" style="max-width: 32rem">
+  <div class="card-body">
+    <h2 class="h5 text-danger">Delete account</h2>
+    <p class="small">This removes your account, your learning plan and your ratings for good.</p>
+    <form method="post" action="{{ url_for('account.delete') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label class="form-label small" for="confirm">Type DELETE to confirm</label>
+      <input class="form-control mb-2" id="confirm" name="confirm" autocomplete="off">
+      <button class="btn btn-danger" type="submit">Delete my account</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

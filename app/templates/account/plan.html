@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}My learning plan{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-baseline gap-2 mb-3">
+  <h1 class="h3 mb-0">My learning plan</h1>
+  {% if plan %}<a class="btn btn-sm btn-outline-secondary" href="{{ url_for('account.plan_print') }}">Printable version</a>{% endif %}
+</div>
+
+{% for skill, favourites in plan.items() %}
+  <section class="mb-4">
+    <h2 class="h5">{{ skill.name }}</h2>
+    <ul class="list-group">
+      {% for fav in favourites %}
+        <li class="list-group-item d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <a href="{{ url_for('games.detail', slug=fav.game.slug) }}">{{ fav.game.title }}</a>
+          <form method="post" action="{{ url_for('account.toggle') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="game_id" value="{{ fav.game.id }}">
+            <input type="hidden" name="skill_id" value="{{ skill.id }}">
+            <input type="hidden" name="next" value="{{ url_for('account.plan') }}">
+            <button class="btn btn-sm btn-outline-danger" type="submit">Remove</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% else %}
+  <div class="alert alert-info">Your plan is empty. <a href="{{ url_for('catalogue.index') }}">Choose a skill</a> and
+    save games from the results.</div>
+{% endfor %}
+{% endblock %}
