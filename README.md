@@ -6,8 +6,8 @@ Every result shows a **reason**, an **evidence level** and the **source** that s
 
 Project for the IU course *Project: Software Engineering (DLMCSPSE01)*. Current release: **v1.0.0** (see `CHANGELOG.md`).
 
-- Live application: <APP_URL>
-- Source code: <GITHUB_URL>
+- Live application: https://xptoirl.onrender.com
+- Source code: https://github.com/AbhinavSandeep/Software-Engineering-DLMCSPSE01-Phase-3
 - Installation and user manual (PDF): `docs/XPtoIRL_Installation_and_User_Manual.pdf`
 
 ## Features
@@ -30,8 +30,8 @@ expert sources. How the score is calculated is explained on the page *How it wor
 Requirements: [Docker Desktop](https://www.docker.com/products/docker-desktop/) with Docker Compose.
 
 ```bash
-git clone https://github.com/<user_name>/xptoirl.git
-cd xptoirl
+git clone https://github.com/AbhinavSandeep/Software-Engineering-DLMCSPSE01-Phase-3.git
+cd Software-Engineering-DLMCSPSE01-Phase-3
 docker compose up --build
 ```
 
